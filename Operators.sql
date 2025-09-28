@@ -55,3 +55,28 @@ from "Employee"
 where "City" = 'Calgary' and "ReportsTo" = 2;
 
 select * from "Employee";
+
+-- No del todo eficiente
+select "EmployeeId", "FirstName", "LastName"
+from "Employee"
+where "FirstName" = 'Andrew' or "FirstName" = 'Steve';
+
+-- IN Mas correcto de filtrar por nombres 
+select "EmployeeId", "FirstName", "LastName"
+from "Employee"
+where "FristName" in ('Andrew', 'Steve', 'Nancy');
+
+-- NOT IN 
+select "EmployeeId", "FirstName", "LastName"
+from "Employee"
+where "FristName" not in ('Andrew', 'Steve', 'Nancy');
+
+-- BETWEEN empleados que tiene un ID entre el 3 y el 7
+select * 
+from "Employee" 
+where "EmployeeId" between 3 and 7;
+
+-- BETWEEN ENTRE LETRAS 
+select  * 
+from "Employee" 
+where "FirstName" between 'A' and 'P';
