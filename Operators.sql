@@ -36,3 +36,22 @@ select *
 from "Employee"
 where "City" <> 'Calgary';
 
+-- AND
+select "EmployeeId", "LastName", "FirstName", "City"
+from "Employee"
+where "City" = 'Calgary' and "City" = 'Edmonton';
+
+-- OR
+select "EmployeeId", "LastName", "FirstName", "City"
+from "Employee"
+where "City" = 'Calgary' or  "City" = 'Edmonton';
+
+select * 
+from "Employee"
+where "City" = 'Calgary' and "ReportsTo" = 6;
+
+select * 
+from "Employee"
+where "City" = 'Calgary' and "ReportsTo" = 2;
+
+select * from "Employee";
